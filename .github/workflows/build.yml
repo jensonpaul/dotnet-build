@@ -12,5 +12,5 @@ jobs:
     runs-on: windows-latest
 
     steps:
-    - run: dir "C:\Program Files\Microsoft Visual Studio\2022"
-    - run: dotnet --version && dotnet info
+    - run: dir "C:\Program Files\Microsoft Visual Studio\2022\Enterprise"
+    - run: dotnet --version && dotnet --list-sdks && dotnet --list-runtimes && dotnet --info
