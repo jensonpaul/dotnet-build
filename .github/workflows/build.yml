@@ -9,10 +9,7 @@ on:
 jobs:
   build:
     name: Build
-    runs-on: ubuntu-latest
-    container: 
-      image: mcr.microsoft.com/dotnet/framework/sdk:4.8.1
-    environment: production
+    runs-on: windows-latest
 
     steps:
     - uses: actions/setup-dotnet@v3
