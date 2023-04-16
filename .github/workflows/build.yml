@@ -10,26 +10,10 @@ jobs:
   build:
     name: Build
     runs-on: ubuntu-latest
+    container: mcr.microsoft.com/dotnet/framework/sdk:4.8.1
     environment: production
 
     steps:
     - uses: actions/setup-dotnet@v3
       with:
         dotnet-version: '6.0.x'
-# Get Ubuntu version
-
-# Download Microsoft signing key and repository
-
-# Install Microsoft signing key and repository
-
-# Clean up
-
-# Update packages
-    - run: export repo_version=$(if command -v lsb_release &> /dev/null; then lsb_release -r -s; else grep -oP '(?<=^VERSION_ID=).+' /etc/os-release | tr -d '"'; fi)
-    - run: lsb_release -r -s
-    - run: wget https://packages.microsoft.com/config/ubuntu/22.04/packages-microsoft-prod.deb -O packages-microsoft-prod.deb
-    - run: sudo dpkg -i packages-microsoft-prod.deb
-    - run: rm packages-microsoft-prod.deb
-    - run: sudo apt update
-    - run: sudo apt-get install -y aspnetcore-runtime-6.0 dotnet-runtime-6.0 dotnet-sdk-6.0
-    - run: dotnet --version && dotnet --info && dotnet --list-runtimes && dotnet --list-sdks
