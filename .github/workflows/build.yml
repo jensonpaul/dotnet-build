@@ -17,4 +17,5 @@ jobs:
     - uses: actions/setup-dotnet@v3
       with:
         dotnet-version: '6.0.x'
-    - run: dotnet --list-runtimes && dotnet --list-sdks
+    - run: apt-get install -y aspnetcore-runtime-6.0 dotnet-runtime-6.0 dotnet-sdk-6.0
+    - run: dotnet --version && dotnet --info && dotnet --list-runtimes && dotnet --list-sdks
