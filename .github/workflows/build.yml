@@ -14,5 +14,5 @@ jobs:
     steps:
     #- run: curl -SL --output vs_buildtools.exe https://aka.ms/vs/17/release/vs_buildtools.exe && ./vs_buildtools.exe --quiet --wait --norestart --nocache --add Microsoft.VisualStudio.Workload.WebBuildTools
     - run: dir "C:\Program Files\"
-    - run: dir "C:\Program Files (x86)\Microsoft Visual Studio\2022\"
+    - run: dir "C:\Program Files\Microsoft Visual Studio\2022\"
 
