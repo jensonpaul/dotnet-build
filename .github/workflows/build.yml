@@ -17,4 +17,4 @@ jobs:
     - uses: actions/setup-dotnet@v3
       with:
         dotnet-version: '6.0.x'
-    - run: ls -lah /usr/share/dotnet/sdk/6.0.408/Sdks/
+    - run: dotnet --version
